@@ -41,8 +41,10 @@
     <h1>Our most popular characters</h1>
   </div>
   <div class="home-grid">
-    <% @listings.first(8).each do |listing| %>
-      <%= render "shared/mascot_card", listing: listing %>
+    <% @listings.each do |listing| %>
+      <% if listing.bookings.count > 3 %>
+        <%= render "shared/mascot_card", listing: listing %>
+      <% end %>
     <% end %>
   </div>
 </div>

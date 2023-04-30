@@ -24,10 +24,47 @@
   font-size: 18px;
 }
 
+.mascot-desc-card {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.listings-show-cards {
+  display: flex;
+  gap: 50px;
+}
+
 .listings-mascot-cards {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 16px;
   flex-grow: 1;
   margin-top: 16px;
+  min-width: 0px;
+  min-height: 0px;
+}
+
+@media(max-width: 768px) {
+  .cards-main {
+    display: block;
+    justify-content: center;
+  }
+  .card-step {
+    width: 320px;
+  }
+  .listings-mascot-cards {
+    grid-template-columns: 1fr;
+  }
+  .mascot-desc-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+  .listings-show-cards {
+    flex-direction: column;
+    gap: 10px;
+  }
 }

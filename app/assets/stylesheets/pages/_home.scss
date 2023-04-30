@@ -4,4 +4,55 @@
   grid-gap: 16px;
   flex-grow: 1;
   margin-top: 16px;
+  min-width: 0px;
+  min-height: 0px;
+}
+
+.mascot-card {
+  overflow: hidden;
+  min-width: 0px;
+}
+
+.mascot-card h5 {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 95%;
+}
+
+.mascot-card-width {
+  width: 18rem;
+}
+
+@media(max-width: 992px) {
+  .home-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .mascot-card {
+    overflow: visible;
+    min-width: auto;
+  }
+  .mascot-card-width {
+    width: 100%;
+  }
+  .mascot-card img {
+    height: 200px !important;
+  }
+}
+
+@media(max-width: 768px) {
+  .home-grid {
+    grid-template-columns: 1fr;
+  }
+  .mascot-card {
+    overflow: visible;
+    min-width: auto;
+  }
+  .mascot-card-width {
+    width: 100%;
+  }
+
+  .mascot-card img {
+    height: 200px !important;
+  }
 }

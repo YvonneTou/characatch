@@ -1,6 +1,6 @@
-<div class="col">
+<div class="col mascot-card card">
   <%= link_to(listing_path(listing), class: "card-links") do %>
-    <div class="card bottom-stroke-red text-decoration-none" style="width: 18rem;">
+    <div class="card bottom-stroke-red text-decoration-none mascot-card-width">
       <% if listing.photo.attached? %>
         <%= cl_image_tag(listing.photo.key, height: 200, alt: listing.mascot_name, class: "card-img-top") %>
       <% else %>

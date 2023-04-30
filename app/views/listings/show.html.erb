@@ -1,8 +1,8 @@
 <div class="container">
-  <div class="d-flex mt-4" style="gap: 50px;">
-    <div class="col-8">
-      <div class="d-flex justify-content-between">
-        <%= cl_image_tag(@listing.photo.key, alt: @listing.mascot_name.titleize, class: "col-4")%>
+  <div class="listings-show-cards mt-4">
+    <div class="col-lg-8 col-md-12">
+      <div class="mascot-desc-card">
+        <%= cl_image_tag(@listing.photo.key, width: 250, alt: @listing.mascot_name.titleize)%>
         <div class="mascot-info mx-3">
           <h1><%= @listing.title %></h1>
           <h5 class="mb-1"><i class="fa-solid fa-location-dot"></i> <%= @listing.location %></h5>
@@ -34,7 +34,7 @@
       </div>
     </div>
 
-    <div class="col-4 mb-5">
+    <div class="col-lg-4 col-md-12 mb-5">
       <div class="form-border">
         <h2 class="text-red">Book <%= @listing.mascot_name %> now!</h2>
         <%= simple_form_for [@listing, @booking] do |f| %>

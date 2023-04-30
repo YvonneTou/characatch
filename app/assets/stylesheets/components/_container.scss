@@ -5,11 +5,24 @@
 
 .container-listings-main {
   display: flex;
+  flex-direction: row;
   gap: 16px;
 }
 
 #map {
   height: 100vh;
+  width: 50%;
   position: sticky;
   top: 0px;
+}
+
+@media(max-width: 768px) {
+  .container-listings-main {
+    flex-direction: column-reverse;
+  }
+  #map {
+    height: 50vh;
+    width: 100%;
+    position: relative;
+  }
 }
